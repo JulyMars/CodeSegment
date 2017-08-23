@@ -1,0 +1,43 @@
+<html>
+<body>
+
+<script type="text/javascript">
+
+var birthdayDate = new Date();
+birthdayDate.setDate(29)
+birthdayDate.setMonth(1)
+birthdayDate.setFullYear(1987);
+
+var todayDate = new Date();
+
+var enddayDate = new Date();
+enddayDate.setDate(29)
+enddayDate.setMonth(1)
+enddayDate.setFullYear(1987 + 100);
+
+var birthdayTimer = birthdayDate.getTime();
+var todayTimer = todayDate.getTime();
+var enddayTimer = enddayDate.getTime();
+
+document.write(birthdayDate.toString())
+document.write("</br>")
+document.write(birthdayTimer+","+todayTimer+","+enddayTimer)
+document.write("</br>")
+var year1 = (todayTimer-birthdayTimer)/365/24/60/60/1000;
+var year2 = (enddayTimer - todayTimer)/365/24/60/60/1000
+document.write(Math.round(year1)+","+Math.round(year2))
+document.write("</br>")
+var month1 = (todayTimer-birthdayTimer)/30/24/60/60/1000;
+var month2 = (enddayTimer - todayTimer)/30/24/60/60/1000;
+document.write(Math.round(month1)+","+Math.round(month2));
+document.write("</br>")
+var day1 = (todayTimer-birthdayTimer)/24/60/60/1000
+var day2 = (enddayTimer - todayTimer)/24/60/60/1000
+document.write(Math.round(day1)+","+Math.round(day2));
+document.write("</br>")
+document.write(Math.round((todayTimer-birthdayTimer)/(enddayTimer-todayTimer)*10000)/100);
+
+</script>
+
+</body>
+</html>
